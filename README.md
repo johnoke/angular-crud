@@ -1,4 +1,5 @@
-# MyAngularApp
+# CRUD App (Products)
+Basic forms, http methods, responsiveness and routing setup in Angular.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
