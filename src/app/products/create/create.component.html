@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Create product</h1>  
+    <a routerLink="/products">Back</a>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="invalid-feedback" *ngIf="submittedOnce && productForm.get('name')?.invalid">
+            <small *ngIf="productForm.get('name')?.errors?.['required']">Name is required</small>
+        </div>
+        <input [ngClass]="{'is-invalid': submittedOnce && productForm.get('name')?.invalid}" class="form-control" type="text" placeholder="Name" formControlName="name" required/>
+        <div class="invalid-feedback" *ngIf="submittedOnce && productForm.get('price')?.invalid">
+            <small *ngIf="productForm.get('price')?.errors?.['required']">Price is required</small>
+        </div>
+        <input [ngClass]="{'is-invalid': submittedOnce && productForm.get('price')?.invalid}" class="form-control" type="number" placeholder="Price" formControlName="price" required/>
+        <div class="invalid-feedback" *ngIf="submittedOnce && productForm.get('stock')?.invalid">
+            <small *ngIf="productForm.get('stock')?.errors?.['required']">Stock is required</small>
+        </div>
+        <input [ngClass]="{'is-invalid': submittedOnce && productForm.get('stock')?.invalid}" class="form-control" type="number" placeholder="Stock" formControlName="stock" required/>
+        <button [disabled]="isSubmitted" class="btn" type="submit">Create</button>
+    </form>
+    <p *ngIf="isSubmitted">Please wait</p>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Products List</h1>
+    <a routerLink="/products/create">Create Product</a>
+    <p *ngIf="isLoading">Please wait</p>
+    <ul>
+       
+        <li *ngFor="let product of products; trackBy: trackByProductId">
+            <h3>{{ product.name }}</h3>
+            <p>${{ product.price.toLocaleString() }} {{ product.stock }} &nbsp;
+                <a routerLink="/products/{{product.id}}" class="edit">Edit</a> &nbsp;
+                <a (click)="deleteClicked(product.id)" class="delete">Delete</a>
+            </p>
+        </li>
+    </ul>
+</div>
