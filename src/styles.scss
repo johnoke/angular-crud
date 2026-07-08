@@ -1,1 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+.container{
+    margin-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+@media (max-width: 600px) {
+    .container{
+        margin-top: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+}
+.form-control {
+  display: block;
+  width: 300px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control:disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+.btn {
+    border: 1px solid !important;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  transition: color .15s ease-in-out,
+              background-color .15s ease-in-out,
+              border-color .15s ease-in-out,
+              box-shadow .15s ease-in-out;
+              
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+form{
+    margin-top: 20px;
+}
+.is-invalid {
+  border-color: #dc3545;   /* Bootstrap danger color */
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,..."); /* optional icon */
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+/* Error message text */
+.invalid-feedback {
+  display: block;          /* ensures it shows when triggered */
+  color: #dc3545;          /* Bootstrap danger color */
+  font-size: 0.875em;      /* slightly smaller text */
+}
